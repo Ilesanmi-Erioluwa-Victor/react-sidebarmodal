@@ -11,6 +11,20 @@ export const Sidebar = () => {
           <FaTimes />
         </button>
       </div>
+
+      <ul className="links">
+        {links.map((link) => {
+          const { id, text, url, icon } = link;
+          return (
+            <li key={id}>
+              <a href={url}>
+                {icon}
+                {text}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </aside>
   );
 };
